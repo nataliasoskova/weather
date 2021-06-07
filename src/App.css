@@ -1,0 +1,190 @@
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Comfortaa', sans-serif;;
+  color:#fff;
+}
+
+.container{
+  width:80%;
+  margin:auto;
+}
+
+.App{
+  height:100vh;
+  
+}
+
+.title{
+  font-weight: bold;
+  text-transform: capitalize;
+  padding:100px 0 60px 0;
+  color:#fff;
+}
+
+.weather-temp{
+  padding-bottom:40px;
+  padding-left:60px;
+}
+
+.weather-temp h1 , .weather-temp h4 , .weather-temp p{
+  padding-bottom: 10px;
+}
+
+.other-weather-info {
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 60px;
+}
+
+
+
+.weather-info p , .weather-info h2{
+  text-align:center;
+}
+
+.user-weather{
+  color:#fff;
+  padding: 60px;
+  border-radius: 20px;
+  border:2px solid #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 20px rgb(255 255 255 / 100%);
+}
+
+.navbar{
+  background-color:#ddd;
+}
+
+.mainImg{
+  border: 2px solid #fff;
+  border-radius: 50px;
+  opacity: 40%;
+  margin-top: 20px;
+  box-shadow: 0px 5px 10px rgb(255 255 255 / 100%);
+}
+
+.region{
+  margin: 30px 0 80px 0;
+  
+}
+
+.regioninput{
+  background:none;
+  border:none;
+  border:1px solid #fff;
+  text-shadow: 2px 2px 4px #fff;
+  border-radius: 10px;
+  padding:20px 50px 20px 50px;
+  outline:none;
+  width: 100%;
+  max-width: 300px;
+  text-transform: uppercase;
+  color: #7e7e7e;
+  font-weight: bold;
+}
+
+.regioninput::placeholder{
+  font-family:'Comfortaa', sans-serif;
+  background-color: none;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000000;
+  font-weight:600;
+  font-size:1rem;
+  padding-left:0;
+  opacity: 60%;
+
+}
+
+.pulse {
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+  animation: pulse 1s infinite;
+}
+.pulse:hover {
+  animation: none;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+
+/*  #################### cycle ##################### */
+
+@keyframes r {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes r1 {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.roatate_me {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border-radius: 100%;
+  margin: 20px;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  border: 0px solid #ccc;
+
+  animation-name: r;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.roatate_me img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 80px;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  animation-name: r1;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
